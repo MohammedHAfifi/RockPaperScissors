@@ -1,8 +1,4 @@
-let playerSelection;
 let getPlayerChoice = prompt("please enter your choice:");
-
-playerSelection = getPlayerChoice.toLowerCase();
-//console.log(playerSelection);
 
 function getComputerChoice() {
 let random = Math.floor(Math.random() * 3);
@@ -15,13 +11,7 @@ if (random === 0) {
 };
 };
 
-//let computerSelection;
-//computerSelection = getComputerChoice();
-//console.log(computerSelection)
-
-function playRound() {
-    let computerSelection;
-    computerSelection = getComputerChoice();
+function playRound(playerSelection, computerSelection) {
 if (playerSelection == computerSelection) {
     return "This game is a draw"
 }else if ((playerSelection == "rock" && computerSelection == "scissors")
@@ -32,20 +22,13 @@ if (playerSelection == computerSelection) {
             return `You lose! ${playerSelection} loses to ${computerSelection}`
         };
 };
-//console.log(playRound());
 
 function game() {
-    let round = playRound()
-    playRound()
-    console.log(round)
-    playRound()
-    console.log(round)
-    playRound()
-    console.log(round)
-    playRound()
-    console.log(round)
-    playRound()
-    console.log(round)
+for (let counter = 0; counter < 5; counter++) {
+    console.log(playRound(playerSelection, computerSelection))
+}
 };
-//console.log(game());
-game()
+
+let playerSelection = getPlayerChoice.toLowerCase();
+let computerSelection = getComputerChoice();
+game(playerSelection, computerSelection)
