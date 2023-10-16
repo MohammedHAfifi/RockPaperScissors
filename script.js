@@ -1,6 +1,4 @@
-let getPlayerChoice = prompt("please enter your choice:");
-let playerSelection = getPlayerChoice.toLowerCase();
-let computerSelection = getComputerChoice();
+let playerSelection = '';
 
 function getComputerChoice() {
     let random = Math.floor(Math.random() * 3);
@@ -24,3 +22,14 @@ function playRound(playerSelection, computerSelection) {
         return `You lose! ${playerSelection} loses to ${computerSelection}`;
     };
 };
+
+let buttons = document.querySelectorAll('.btn');
+let result = document.querySelector('#roundResult');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        playerSelection = button.id;
+        let computerSelection = getComputerChoice();
+        result.textContent = playRound(playerSelection, computerSelection);
+    })
+});
