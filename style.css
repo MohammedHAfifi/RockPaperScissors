@@ -1,0 +1,56 @@
+body {
+    background-color: gray;
+    color: #292929;
+    min-height: 100vh;
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #3B3B98;
+    color: whitesmoke;
+    width: 100vw;
+}
+
+.score {
+    min-width: 150px;
+}
+
+#main {
+    min-width: 30vw;
+}
+
+#roundResult {
+    border: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    min-height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F0F0;
+
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #FFC107;
+}
+
+#footer {
+    background-color: #3B3B98;
+    color: #F0F0F0;
+    width: 100vw;
+    text-align: center;
+}
